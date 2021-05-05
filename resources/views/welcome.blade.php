@@ -44,7 +44,7 @@
         <div class="row chat-row">
             <div class="chat-content">
                 <ul>
-                    <li>gfftf</li>
+
                 </ul>
             </div>
             <div class="chat-section">
@@ -77,6 +77,9 @@
                     return false;
                 }
 
+            });
+            socket.on('sendChatToClient', (message) => {
+                $('.chat-content ul').append(`<li>${message}</li>`)
             })
         })
     </script>
