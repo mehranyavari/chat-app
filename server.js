@@ -15,6 +15,8 @@ io.on('connection', (socket) => {
 
     socket.on('sendChatToServer', (message) => {
         console.log(message);
+
+        io.socket.emit('sendChatToClient', message)
     });
 
 
