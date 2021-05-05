@@ -10,12 +10,38 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        .chat-row {
+            margin: 50px;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 8px;
+            background: #928787;
+            margin-bottom: 20px;
+        }
+
+        ul li:nth-child(2n-2) {
+            background: #c3c5c5;
+        }
+
+        .chat-input {
+            border: 1px solid lightgray;
+            padding: 8px 10px;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="container">
-        <div class="row">
+        <div class="row chat-row">
             <div class="chat-content">
                 <ul>
                     <li>gfftf</li>
@@ -23,7 +49,7 @@
             </div>
             <div class="chat-section">
                 <div class="chat-box">
-                    <div class="chat-input bg-white" id="chatInput" contenteditable="">
+                    <div class="chat-input bg-success text-white" id="chatInput" contenteditable="">
 
                     </div>
                 </div>
@@ -40,6 +66,7 @@
             let socket = io(ipAddress + ':' + socketPort);
 
             socket.on('connection');
+
         })
     </script>
 </body>
